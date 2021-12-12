@@ -1,4 +1,9 @@
-h1{
-    font-size: 56px;
-    color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body{
+    background-color: gray; /*está aqui para evitar dor de cabeça*/
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
