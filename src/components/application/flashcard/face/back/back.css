@@ -1,0 +1,7 @@
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.response .back-face {
+    transform: rotateY(0deg);
+}

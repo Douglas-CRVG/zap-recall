@@ -1,0 +1,13 @@
+header{
+    width: 100%;
+    padding: 26px 0 0 26px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > img{
+    width: 141px;
+    height: 54px;
+}
