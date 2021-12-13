@@ -38,7 +38,32 @@ export default function Application({dataFlashcards, restart, zaps}){
         <>
             <Header />
             {count !== flashcards.length? <h1>{title}</h1> : ""}
-            {count === flashcards.length? <Finish incorrect={incorrect} id={id} restart={reset} zaps={zaps} zap={zap} /> : <Flashcard setZap={setZap} zap={zap} setClassName={setClassName} className={className} setColor={setColor} color={color} setButton={setButton} button={button} flashcard={flashcards[count]} setCount={setCount} count={count} total={flashcards.length} functionExc={nextFlashcard} setIncorrect={setIncorrect} incorrect={incorrect} />}
+            {count === flashcards.length?
+            <Finish
+                incorrect={incorrect}
+                id={id}
+                restart={reset}
+                zaps={zaps}
+                zap={zap}
+            />
+            :
+            <Flashcard
+                setZap={setZap}
+                zap={zap}
+                setClassName={setClassName}
+                className={className}
+                setColor={setColor}
+                color={color}
+                setButton={setButton}
+                button={button}
+                flashcard={flashcards[count]}
+                setCount={setCount}
+                count={count}
+                total={flashcards.length}
+                functionExc={nextFlashcard}
+                setIncorrect={setIncorrect}
+                incorrect={incorrect}
+            />}
         </>
     )
 }

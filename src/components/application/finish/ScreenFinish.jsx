@@ -15,11 +15,11 @@ export default function ScreenFinish(props){
                 <img src={img} alt={text} />
             </div>
             <p>{description}</p>
-            <button onClick={() => restart(id)}>
+            <button onClick={() => restart(id)} data-identifier="start-zap-recall">
                 Tentar novamente
                 <img src={next} alt="next" />
             </button>
-            <button onClick={() => window.location.reload()}>
+            <button onClick={() => window.location.reload()} data-identifier="start-zap-recall">
                 Voltar para a Home
                 <img src={next} alt="next" />
             </button>
