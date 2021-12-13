@@ -7,20 +7,25 @@ export default function Face(props){
         setClassName,
         setColor,
         setButton,
-        button
+        button,
+        flashcard,
+        setCount,
+        count,
+        total,
+        functionExc
     } = props;
 
     
 
-    function result(color, button){
+    function result(color, count){
         setColor(color);
         setButton("button2");
     }
 
     return(
         <>
-            <Front setClassName={setClassName} question = {flashcards[contador].question} key={contador} />
-            <Back button={button} result={result}/>
+            <Front setClassName={setClassName} question = {flashcard.question} count={count} total={total} />
+            <Back button={button} result={result} flashcard={flashcard} count={count} total={total} functionExc={functionExc} />
         </>
     );
 }

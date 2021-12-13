@@ -5,18 +5,25 @@ import Buttons from "../buttons/Buttons";
 export default function Back(props) {
     const {
         result,
-        button
+        button,
+        flashcard,
+        count,
+        total,
+        functionExc
     } = props;
+
+    // button={button} result={result} response = {flashcard.response} total={total}
+
     return (
         <div className="back-face face">
             <div className="title">
-                <p>O que é JSX?</p>
-                <span>1/10</span>
+                <p>{flashcard.question}</p>
+                <span>{`${count + 1}/${total}`}</span>
             </div>
             <p className="content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse vel, neque officia ut culpa hic blanditiis nobis eligendi id, recusandae nesciunt cupiditate optio ad maxime accusantium adipisci. Minus, obcaecati quo?
+                {flashcard.response}
             </p>
-            <Buttons result={result} button={button} functionExec={result} />
+            <Buttons result={result} button={button} functionExec={functionExc} />
         </div>
     );
 }
