@@ -1,15 +1,15 @@
 import logoZap from '../assets/logo.png';
-import next from '../assets/next.png';
 import "../home/home.css"
+import ButtonHome from './ButtonHome';
 
-export default function Home({setAppScreen}) {
+export default function Home({startRecall, data}) {
     return(
-        <section>
+        <section className="home">
             <img src={logoZap} alt="logo home" />
-            <button onClick={() => setAppScreen("Application")} data-identifier="start-zap-recall">
-            Praticar React 
-            <img src={next} alt={next} />
-            </button>            
+            <div>
+                {data.map(({title}, index) => <ButtonHome title={title} startRecall={startRecall} index={index}/>)}
+            </div>
+            
         </section>
     );
 }

@@ -1,16 +1,32 @@
-section > img{
-    margin-bottom: 260px;
-    width: 218px;
-    height: 279px;
-}
-
 section{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-section > button{
+.home > img{
+    width: 218px;
+    height: 279px;
+}
+
+.home{
+    height: 100vh;
+    justify-content: space-around;
+}
+
+button > img{
+    width: 19px;
+    height: 14px;
+    margin-left: 5px;
+}
+
+.home > div{
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button{
     width: 345px;
     height: 72px;
     border-radius: 12px;
@@ -18,10 +34,4 @@ section > button{
     background-color: #ffffff;
     font-size: 23px;
     font-weight: 700;
-}
-
-button > img{
-    width: 19px;
-    height: 14px;
-    margin-left: 5px;
 }
