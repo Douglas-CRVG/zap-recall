@@ -5,3 +5,41 @@
 .response .back-face {
     transform: rotateY(0deg);
 }
+
+.back-face .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 48px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.buttons > div > p {
+    width: 38px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.black {
+    border: 3px solid #000000;
+}
+
+.red {
+    border: 3px solid #f74848;
+}
+
+.green {
+    border: 3px solid #62db38;
+}
+
+.yellow {
+    border: 3px solid #ffef61;
+}

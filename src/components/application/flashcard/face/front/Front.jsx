@@ -1,9 +1,13 @@
 import "../front/front.css";
-import turn from "../../../../assets/turn.png"
+import Buttons from "../buttons/Buttons";
 
-export default function Front(){
+export default function Front(props) {
+    const {
+        setClassName
+    } = props;
+
     return (
-        <div class="front-face face">
+        <div className={`front-face face`}>
             <div className="title">
                 <p></p>
                 <span>1/10</span>
@@ -11,9 +15,7 @@ export default function Front(){
             <p className="content">
                 O que é JSX?
             </p>
-            <div className="buttons">
-                <img src={turn} alt="return"/>
-            </div>
+            <Buttons button="button2" functionExec={() => setClassName("response")} />
         </div>
     );
 }

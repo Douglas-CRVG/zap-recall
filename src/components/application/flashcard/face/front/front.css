@@ -26,13 +26,14 @@
     text-align: center;
 }
 
-.buttons {
+.buttons2 {
     width: 100%;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
 }
 
-.buttons img{
+.buttons2 img{
     width: 40px;
     height: 36px;
+    cursor: pointer;
 }
