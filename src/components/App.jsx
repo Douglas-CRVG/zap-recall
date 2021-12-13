@@ -7,6 +7,7 @@ import Application from "./application/Application";
 export default function App() {
     const [appScreen, setAppScreen] = useState("Home");
     const [flashcard, setFlashcard] = useState({})
+    const [zaps, setZaps] = useState("");
 
     const  data = [
         {
@@ -76,13 +77,18 @@ export default function App() {
     ];
 
     function startRecall(index){
-        setAppScreen("Application");
-        setFlashcard(data[index]);
+        if((zaps%1===0) && (zaps >= 1) && (zaps <= data[index].flashcards.length)){
+            setAppScreen("Application");
+            setFlashcard(data[index]);
+        } else {
+            setZaps("")
+            alert("Insira uma meta válida!");
+        }
     }
 
     return (
         <>
-            {appScreen === "Home"? <Home startRecall={startRecall} data={data}/> : <Application restart={startRecall} dataFlashcards={flashcard}/>}
+            {appScreen === "Home"? <Home startRecall={startRecall} data={data} setZaps={setZaps} zaps={zaps} /> : <Application restart={startRecall} dataFlashcards={flashcard} zaps={zaps}/>}
         </>
     );
 }

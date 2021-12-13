@@ -13,12 +13,16 @@ export default function Face(props){
         total,
         functionExc,
         setIncorrect,
-        incorrect
+        incorrect,
+        setZap,
+        zap
     } = props;   
 
     function result(color){
         if(color==="red"){
             setIncorrect(incorrect + 1);
+        } else if(color==="yellow") {
+            setZap(zap + 1);
         }
         setColor(color);
         setButton("button2");

@@ -15,12 +15,14 @@ export default function Flashcard(props) {
         total,
         functionExc,
         setIncorrect,
-        incorrect
+        incorrect,
+        setZap,
+        zap
     } = props;
 
     return (
         <div className={`flashcard ${className} ${color}`} data-identifier="flashcard">
-            <Face setClassName={setClassName} setColor={setColor} setButton={setButton} button={button} flashcard={flashcard} setCount={setCount} count={count} total={total} functionExc={functionExc} setIncorrect={setIncorrect} incorrect={incorrect} />
+            <Face setClassName={setClassName} setColor={setColor} setButton={setButton} button={button} flashcard={flashcard} setCount={setCount} count={count} total={total} functionExc={functionExc} setIncorrect={setIncorrect} incorrect={incorrect} setZap={setZap} zap={zap}/>
         </div>
     );
 }

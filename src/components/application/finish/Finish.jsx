@@ -3,11 +3,19 @@ import success from "../../assets/party.png";
 import noSuccess from "../../assets/sad.png";
 import ScreenFinish from "./ScreenFinish";
 
-export default function Finish({incorrect, id, restart}){
+export default function Finish(props) {
+    const {
+        incorrect,
+        id,
+        restart,
+        zaps,
+        zap
+    } = props;
+    console.log(zap)
 
-    if(incorrect === 0){
+    if(incorrect === 0 || zap >= zaps) {
         return(
-            <ScreenFinish id={id} restart={restart} text="PARABÉNS!" img={success} description="Você não esqueceu de nenhum flashcard!"/>
+            <ScreenFinish id={id} restart={restart} text="PARABÉNS!" img={success} description={incorrect > 0? `Você atingiu seu objetivo de Zaps!`:`Você não esqueceu de nenhum flashcard!`}/>
         );
     } else {
         return(
