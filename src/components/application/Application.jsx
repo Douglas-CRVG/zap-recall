@@ -4,7 +4,7 @@ import Finish from "./finish/Finish";
 import Flashcard from "./flashcard/Flashcard"
 import Header from "./header/Header"
 
-export default function Application({dataFlashcards}){
+export default function Application({dataFlashcards, restart}){
     const [className, setClassName] = useState("");
     const [color, setColor] = useState("");
     const [button, setButton] = useState("");
@@ -23,10 +23,19 @@ export default function Application({dataFlashcards}){
         setCount(count + 1);
     }
 
+    function reset(index){
+        setClassName("");
+        setColor("");
+        setButton("");
+        setCount(0);
+        setIncorrect(0)
+        restart(index);
+    }
+
     return(
         <>
             <Header />
-            {count === flashcards.length? <Finish incorrect={incorrect} id={id} /> : <Flashcard setClassName={setClassName} className={className} setColor={setColor} color={color} setButton={setButton} button={button} flashcard={flashcards[count]} setCount={setCount} count={count} total={flashcards.length} functionExc={nextFlashcard} setIncorrect={setIncorrect} incorrect={incorrect} />}
+            {count === flashcards.length? <Finish incorrect={incorrect} id={id} restart={reset} /> : <Flashcard setClassName={setClassName} className={className} setColor={setColor} color={color} setButton={setButton} button={button} flashcard={flashcards[count]} setCount={setCount} count={count} total={flashcards.length} functionExc={nextFlashcard} setIncorrect={setIncorrect} incorrect={incorrect} />}
         </>
     )
 }

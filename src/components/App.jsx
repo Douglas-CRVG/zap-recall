@@ -11,6 +11,44 @@ export default function App() {
     const  data = [
         {
             id: 0,
+            title: "Praticar React",
+            flashcards: [
+                {
+                    question: "O que é JSX?",
+                    response: "Uma extensão de linguagem do JavaScript"
+                },
+                {
+                    question: "O React é:",
+                    response: "uma biblioteca JavaScript para construção de interfaces"
+                },
+                {
+                    question: "Componentes devem iniciar com:",
+                    response: "letra maiúscula"
+                },
+                {
+                    question: "Podemos colocar __ dentro do JSX ",
+                    response: "expressões"
+                },
+                {
+                    question: "O ReactDOM nos ajuda:",
+                    response: " interagindo com a DOM para colocar componentes React na mesma"
+                },
+                {
+                    question: "Usamos o npm para:",
+                    response: "gerenciar os pacotes necessários e suas dependências"
+                },
+                {
+                    question: "Usamos props para:",
+                    response: "passar diferentes informações para componentes"
+                },
+                {
+                    question: "Usamos estado (state) para:",
+                    response: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
+                }
+            ]
+        },
+        {
+            id: 1,
             title: "Testando mais de um flashcard",
             flashcards: [
                 {
@@ -34,36 +72,6 @@ export default function App() {
                     response: "Resposta 5!"
                 }
             ]
-        },
-        {
-            id: 1,
-            title: "Test2",
-            flashcards: [
-                {
-                    question: "É o teste 2 mermo Pergunta 1?",
-                    response: "Resposta 1!"
-                },
-                {
-                    question: "Pergunta 2?",
-                    response: "Resposta 2!"
-                },
-                {
-                    question: "Pergunta 3?",
-                    response: "Resposta 3!"
-                },
-                {
-                    question: "Pergunta 4?",
-                    response: "Resposta 4!"
-                },
-                {
-                    question: "Pergunta 5?",
-                    response: "Resposta 5!"
-                },
-                {
-                    question: "Pergunta 5?",
-                    response: "Resposta 5!"
-                }
-            ]
         }
     ];
 
@@ -74,7 +82,7 @@ export default function App() {
 
     return (
         <>
-            {appScreen === "Home"? <Home startRecall={startRecall} data={data}/> : <Application dataFlashcards={flashcard}/>}
+            {appScreen === "Home"? <Home startRecall={startRecall} data={data}/> : <Application restart={startRecall} dataFlashcards={flashcard}/>}
         </>
     );
 }
