@@ -9,15 +9,17 @@ export default function Face(props){
         setButton,
         button,
         flashcard,
-        setCount,
         count,
         total,
-        functionExc
-    } = props;
+        functionExc,
+        setIncorrect,
+        incorrect
+    } = props;   
 
-    
-
-    function result(color, count){
+    function result(color){
+        if(color==="red"){
+            setIncorrect(incorrect + 1);
+        }
         setColor(color);
         setButton("button2");
     }

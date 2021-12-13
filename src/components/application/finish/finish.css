@@ -1,0 +1,22 @@
+.finish > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.finish > div > p{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.finish > div > img{
+    width: 36px;
+    height: 36px;
+}
+
+.finish > p{
+    width: 424px;
+    font-size: 22px;
+    text-align: center;
+}

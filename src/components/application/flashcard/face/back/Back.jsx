@@ -12,8 +12,6 @@ export default function Back(props) {
         functionExc
     } = props;
 
-    // button={button} result={result} response = {flashcard.response} total={total}
-
     return (
         <div className="back-face face">
             <div className="title">

@@ -1,46 +1,26 @@
-import { useState } from "react";
 import "../flashcard/flashcard.css"
 import Face from "./face/Face";
 
-export default function Flashcard() {
-    const [className, setClassName] = useState("");
-    const [color, setColor] = useState("");
-    const [button, setButton] = useState("");
-    const [count, setCount] = useState(0);
-    
-    const flashcards = [
-        {
-            question: "Pergunta 1?",
-            response: "Resposta 1!"
-        },
-        {
-            question: "Pergunta 2?",
-            response: "Resposta 2!"
-        },
-        {
-            question: "Pergunta 3?",
-            response: "Resposta 3!"
-        },
-        {
-            question: "Pergunta 4?",
-            response: "Resposta 4!"
-        },
-        {
-            question: "Pergunta 5?",
-            response: "Resposta 5!"
-        }
-    ];
-
-    function nextFlashcard(){
-        setClassName("");
-        setColor("");
-        setButton("");
-        setCount(count + 1);
-    }
+export default function Flashcard(props) {
+    const {
+        className,
+        setClassName,
+        color,
+        setColor,
+        button,
+        setButton,
+        count,
+        setCount,
+        flashcard,
+        total,
+        functionExc,
+        setIncorrect,
+        incorrect
+    } = props;
 
     return (
         <div className={`card ${className} ${color}`}>
-            <Face setClassName={setClassName} setColor={setColor} setButton={setButton} button={button} flashcard={flashcards[count]} setCount={setCount} count={count} total={flashcards.length} functionExc={nextFlashcard}/>
+            <Face setClassName={setClassName} setColor={setColor} setButton={setButton} button={button} flashcard={flashcard} setCount={setCount} count={count} total={total} functionExc={functionExc} setIncorrect={setIncorrect} incorrect={incorrect} />
         </div>
     );
 }
