@@ -3,11 +3,7 @@ import success from "../../assets/party.png";
 import noSuccess from "../../assets/sad.png";
 import ScreenFinish from "./ScreenFinish";
 
-export default function Finish(props){
-    const {
-        incorrect
-    } = props;
-
+export default function Finish({incorrect}){
     if(incorrect === 0){
         return(
             <ScreenFinish text="PARABÉNS!" img={success} description="Você não esqueceu de nenhum flashcard!"/>

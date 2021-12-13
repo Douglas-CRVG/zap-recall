@@ -1,5 +1,7 @@
 import "../back/back.css";
 import Buttons from "../buttons/Buttons";
+import Content from "../content/Content";
+import Title from "../title/Title";
 
 
 export default function Back(props) {
@@ -14,13 +16,8 @@ export default function Back(props) {
 
     return (
         <div className="back-face face">
-            <div className="title">
-                <p>{flashcard.question}</p>
-                <span>{`${count + 1}/${total}`}</span>
-            </div>
-            <p className="content">
-                {flashcard.response}
-            </p>
+            <Title question={flashcard.question} counter={`${count + 1}/${total}`} />
+            <Content content={flashcard.response} />
             <Buttons result={result} button={button} functionExec={functionExc} />
         </div>
     );

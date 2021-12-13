@@ -19,7 +19,7 @@ export default function Flashcard(props) {
     } = props;
 
     return (
-        <div className={`card ${className} ${color}`}>
+        <div className={`flashcard ${className} ${color}`} data-identifier="flashcard">
             <Face setClassName={setClassName} setColor={setColor} setButton={setButton} button={button} flashcard={flashcard} setCount={setCount} count={count} total={total} functionExc={functionExc} setIncorrect={setIncorrect} incorrect={incorrect} />
         </div>
     );

@@ -1,7 +1,7 @@
-export default function Content(){
+export default function Content({content}) {
     return(
         <p className="content">
-            O que é JSX?
+            {content}
         </p>
     );
 }

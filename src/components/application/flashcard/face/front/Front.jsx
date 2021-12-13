@@ -1,5 +1,7 @@
 import "../front/front.css";
 import Buttons from "../buttons/Buttons";
+import Title from "../title/Title";
+import Content from "../content/Content";
 
 export default function Front(props) {
     const {
@@ -9,17 +11,10 @@ export default function Front(props) {
         total
     } = props;
 
-    //setClassName={setClassName} question = {flashcard.question} count={count} total={total}
-
     return (
         <div className={`front-face face`}>
-            <div className="title">
-                <p></p>
-                <span>{`${count + 1}/${total}`}</span>
-            </div>
-            <p className="content">
-                {question}
-            </p>
+            <Title counter={`${count + 1}/${total}`} question="" />
+            <Content content={question} />
             <Buttons button="button2" functionExec={() => setClassName("response")} />
         </div>
     );

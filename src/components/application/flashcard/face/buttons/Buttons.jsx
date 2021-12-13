@@ -1,13 +1,11 @@
 import Button from "./button/Button";
 import Button2 from "./button/Button2";
 
-export default function Buttons(props) {
-    const {
-        functionExec,
-        button,
-        result
-    } = props;
-
+export default function Buttons({
+    functionExec,
+    button,
+    result
+}) {
     const buttons = [
         {
             color: "black",
